@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Create Timestamp
-        run: echo "Timestamp:$(date)" > ./timestamp.txt
+        run: echo "Timestamp:$(date)aa" > ./timestamp.txt
 
       - name: Commit changes to the repository
         run: |
