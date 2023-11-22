@@ -9,10 +9,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
       - name: Create Timestamp
-        run: echo 'Timestamp:$(date)' > ./timestamp.txt
+        run: echo "Timestamp:$(date)" > ./timestamp.txt
 
       - name: Commit changes to the repository
         run: |
@@ -29,6 +30,5 @@ jobs:
           # Display remote URLs
           git remote -v
 
-
-        - name: Push to the repository
+      - name: Push to the repository
         run: git push https://agilethief:${{ secrets.GH_BLOG_TOKEN }}@github.com/agilethief/TBWebappBlog.git HEAD:main
