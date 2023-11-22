@@ -29,5 +29,6 @@ jobs:
           # Display remote URLs
           git remote -v
 
-          # Push to the repository
-          git push https://${{ secrets.GH_BLOG_TOKEN }}@github.com/agilethief/TBWebappBlog.git HEAD:main
+
+        - name: Push to the repository
+        run: git push https://agilethief:${{ secrets.GH_BLOG_TOKEN }}@github.com/agilethief/TBWebappBlog.git HEAD:main
