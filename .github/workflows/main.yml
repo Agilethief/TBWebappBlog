@@ -31,8 +31,8 @@ jobs:
         run: dir
 
       - name: Navigate to frontend build directory
-        run: cd ../frontend/dist
+        run: cd ./frontend/dist
 
       - name: Copy frontend build to backend repository
         run: |
-          cp -r * ../backend/tbwebappbackend/react_build
+          cp -r * ./backend/tbwebappbackend/react_build
