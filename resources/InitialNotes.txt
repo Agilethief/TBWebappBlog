@@ -42,3 +42,4 @@ Blogs:
 }
 
 
+Github actions to copy frontend build over automatically.
