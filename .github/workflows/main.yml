@@ -3,7 +3,7 @@ name: Build and copy frontend to the backend repo
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build:
