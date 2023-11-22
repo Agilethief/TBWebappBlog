@@ -9,27 +9,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
-      - name: Setup Node.js environment
-        uses: actions/setup-node@v4
-        with:
-          node-version: 18.x
-
-      - name: Navigate to frontend directory
-        run: cd frontend
-
-      - name: Install dependencies
-        working-directory: ./frontend
-        run: npm install
-
-      - name: Build frontend
-        working-directory: ./frontend
-        run: npm run build
-
-      - name: Copy frontend build to backend repository
-        run: |
-          cp -r ./frontend/dist ./backend/tbwebappbackend/react_build
+      - name: Create Timestamp
+        run: echo "Timestamp:$(date)aa" > ./timestamp.txt
 
       - name: Commit changes to the repository
         run: |
@@ -46,5 +30,5 @@ jobs:
           # Display remote URLs
           git remote -v
 
-          # Push to the repository
-          git push https://${{ secrets.GH_BLOG_TOKEN }}@github.com/agilethief/TBWebappBlog.git HEAD:main
+      - name: Push to the repository
+        run: git push https://agilethief:${{ secrets.GH_BLOG_TOKEN }}@github.com/agilethief/TBWebappBlog.git HEAD:main
