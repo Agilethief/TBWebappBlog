@@ -35,6 +35,16 @@ jobs:
         run: |
           git config user.email "tbermanseder@gmail.com"
           git config user.name "agilethief"
+
+          # Display configured user
+          git config user.email
+          git config user.name
+
           git add .
           git commit -m "Update frontend build [skip ci]"
+
+          # Display remote URLs
+          git remote -v
+
+          # Push to the repository
           git push https://${{ secrets.GH_BLOG_TOKEN }}@github.com/agilethief/TBWebappBlog.git HEAD:main
