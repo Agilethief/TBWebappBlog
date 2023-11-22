@@ -30,3 +30,11 @@ jobs:
       - name: Copy frontend build to backend repository
         run: |
           cp -r ./frontend/dist ./backend/tbwebappbackend/react_build
+
+      - name: Commit changes to the repository
+        run: |
+          git config --global user.email "agilethief@github.com"
+          git config --global user.name "agilethief"
+          git add .
+          git commit -m "Update frontend build [skip ci]"
+          git push
