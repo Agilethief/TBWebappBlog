@@ -20,7 +20,7 @@ jobs:
         run: dir
 
       - name: Navigate to frontend directory
-        run: cd ../frontend
+        run: cd frontend
 
       - name: Install dependencies
         run: npm install
