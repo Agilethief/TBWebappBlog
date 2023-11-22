@@ -33,5 +33,5 @@ jobs:
       - name: Copy frontend build to backend repository
         working-directory: .
         run: |
-          mkdir ../backend-repo/frontend
-          cp -r * ../backend-repo/frontend/
+          mkdir ../backend/tbwebappbackend/react_build
+          cp -r * ..backend/tbwebappbackend/react_build
