@@ -11,6 +11,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Create Timestamp
+        run: echo "Timestamp: $(date)" > timestamp.txt
+
       - name: Commit changes to the repository
         run: |
           git config user.email "tbermanseder@gmail.com"
