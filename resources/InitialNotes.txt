@@ -1,0 +1,44 @@
+Blog/ app.
+Will have a series of blog pages indexed by number
+
+Frontend:
+React + tailwind
+
+Public pages:
+About me (Simple resume + send to formal portfolio site)
+Home (Embed latest post + any highlights
+Blog:id (Individual blog page to read
+Login (gain auth to site)
+
+Admin pages:
+User administration (Set username and password)
+Edit Blog page (RCE to edit and set the content of the blog page)
+
+Backend: 
+Node JS
+Database? Mongoose or SQLLite?
+
+
+Blog Object Schema
+Blogs:
+{
+	Blog: 
+  {
+    ID: “blogID”
+    Name: “BlogName”
+    "url": "http://www.tbwebapp.com/blog/id",
+    DatePublished: “PublishDate”
+    DateCreated: “PublishDate”
+    DateEdited: “PublishDate”
+    Author: “username”
+    category: “Programming / Art / Life”
+    Tags: [tag1, tag2]
+    Title: “title”
+    Description: “Short 1 sentence line for the post”
+    KeyImage: “/content/images/image.jpg”
+    Content: <html>html body content goes in here </html>
+    "wordcount": "1120",
+  }
+}
+
+
