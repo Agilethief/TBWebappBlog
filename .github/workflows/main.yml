@@ -17,8 +17,7 @@ jobs:
           node-version: 18.x
 
       - name: Install dependencies
-        run: cd frontend
-          npm install
+        run: cd frontend && npm install
 
       - name: Build frontend
         run: npm run build
