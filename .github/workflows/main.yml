@@ -16,6 +16,9 @@ jobs:
         with:
           node-version: 18.x
 
+      - name: Get list of folders
+        run: dir
+
       - name: Navigate to frontend directory
         run: cd ../frontend
 
