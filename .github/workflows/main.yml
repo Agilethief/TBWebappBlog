@@ -16,9 +16,6 @@ jobs:
         with:
           node-version: 18.x
 
-      - name: Get list of folders
-        run: dir
-
       - name: Navigate to frontend directory
         run: cd frontend
 
@@ -29,6 +26,9 @@ jobs:
       - name: Build frontend
         working-directory: ./frontend
         run: npm run build
+
+      - name: Get list of folders
+        run: dir
 
       - name: Navigate to frontend build directory
         run: cd ../frontend/dist
