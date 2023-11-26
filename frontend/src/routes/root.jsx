@@ -1,7 +1,21 @@
-import { Outlet, Link } from "react-router-dom";
+import {
+  Outlet,
+  Link,
+  useLoaderData,
+} from "react-router-dom";
+//import { getBlogs} from "../blogs.js"; // This will be how we get the data from the back end
 import "../app.css";
 
+export async function loader() {
+  //const blogs = await getBlogs();
+  //return { blogs };
+
+  return { Blog: "blog" };
+}
+
 const Root = () => {
+  const data = useLoaderData();
+  console.log(data);
   return (
     <>
       <div id='sidebar'>
@@ -48,9 +62,16 @@ const Root = () => {
             >
               About
             </Link>
+            <Link
+              className='menubutton'
+              to={`/Blog/1`}
+            >
+              Blog
+            </Link>
           </ul>
         </nav>
       </div>
+      <div className='sidebarPad'></div>
       <div id='detail'>
         <Outlet />
       </div>
